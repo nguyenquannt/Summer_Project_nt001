@@ -1,0 +1,28 @@
+QUẢN LÝ CỦA HÀNG TIỆN LỢI
+---------------------------
+Yêu cầu chức năng : 
+---------------------------
+- Nhân viên: 
++ Lập hóa đơn bán hàng 
+
++ Quản lý khách hàng (Thành viên và không thành viên)
+
++ Xem các đơn hàng đã bán trong ngày
+------------------------------------------------------
+- Quản lý: 
++ Quản lý khách hàng (Thành viên và không thành viên)
+
++ quản lý nhân viên: xem, thêm, xóa, sửa, tìm kiếm nhân viên, nhập xuất danh sách nhân viên từ file excel
+
++ Tính lương cho nhân viên
+
++ quản lý doanh thu: thống kê doanh thu theo ngày, tháng, năm
+
++ quản lý xuất nhập kho: danh sách hàng hóa nhập theo ngày, tháng, năm - danh sách hàng hóa bán ra theo ngày, tháng, năm - nhập xuất danh sách hàng  hóa từ file excel
+
++ Thống kê mặt hàng bán chạy, tồn kho (top 5, 10, 15, 20)
+
+33, 124, 163
+
+153 153 255
+

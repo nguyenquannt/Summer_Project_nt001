@@ -10,10 +10,11 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class ForgotPass_GUI extends JFrame {
 
-	private JPanel contentPane;
+	private JPanel PanelMain;
 
 	/**
 	 * Launch the application.
@@ -35,51 +36,53 @@ public class ForgotPass_GUI extends JFrame {
 	 * Create the frame.
 	 */
 	public ForgotPass_GUI() {
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconForgotPass24px.png"));
 		setTitle("Quên mật khẩu");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 400);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 255));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		PanelMain = new JPanel();
+		PanelMain.setBackground(new Color(255, 255, 255));
+		PanelMain.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		setContentPane(PanelMain);
+		PanelMain.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("BẠN QUÊN MẬT KHẨU ? ");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(175, 100, 290, 36);
-		contentPane.add(lblNewLabel);
+		JLabel lbTitle = new JLabel("BẠN QUÊN MẬT KHẨU ? ");
+		lbTitle.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lbTitle.setBounds(175, 100, 290, 36);
+		PanelMain.add(lbTitle);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\New_Project\\src\\Images\\forgotPass.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\forgotPass.png"));
 		lblNewLabel_1.setBounds(37, 100, 128, 128);
-		contentPane.add(lblNewLabel_1);
+		PanelMain.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Đừng lo lắng! hãy liên hệ với chúng");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_2.setBounds(175, 146, 300, 22);
-		contentPane.add(lblNewLabel_2);
+		JLabel lbtxt1 = new JLabel("Đừng lo lắng! hãy liên hệ với chúng");
+		lbtxt1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lbtxt1.setBounds(175, 146, 300, 22);
+		PanelMain.add(lbtxt1);
 		
-		JLabel lblNewLabel_2_1 = new JLabel("tôi theo địa chỉ sau:");
-		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_2_1.setBounds(175, 178, 300, 22);
-		contentPane.add(lblNewLabel_2_1);
+		JLabel lbtxt2 = new JLabel("tôi theo địa chỉ sau:");
+		lbtxt2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lbtxt2.setBounds(175, 178, 300, 22);
+		PanelMain.add(lbtxt2);
 		
-		JLabel lblNewLabel_2_1_1 = new JLabel("Email: ntanhquan.sly@gmail.com");
-		lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2_1_1.setBounds(175, 210, 305, 26);
-		contentPane.add(lblNewLabel_2_1_1);
+		JLabel lbtxtEmail = new JLabel("Email: ntanhquan.sly@gmail.com");
+		lbtxtEmail.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbtxtEmail.setBounds(175, 210, 305, 26);
+		PanelMain.add(lbtxtEmail);
 		
-		JLabel lblNewLabel_2_1_1_1 = new JLabel("SDT: 0365962232");
-		lblNewLabel_2_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2_1_1_1.setBounds(175, 246, 167, 22);
-		contentPane.add(lblNewLabel_2_1_1_1);
+		JLabel lbtxtPhone = new JLabel("SDT: 0365962232");
+		lbtxtPhone.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbtxtPhone.setBounds(175, 246, 167, 22);
+		PanelMain.add(lbtxtPhone);
 		
-		JLabel lblNewLabel_2_1_2_1 = new JLabel("Trân trọng !");
-		lblNewLabel_2_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_2_1_2_1.setBounds(337, 311, 128, 30);
-		contentPane.add(lblNewLabel_2_1_2_1);
+		JLabel lbtxtThanks = new JLabel("Trân trọng !");
+		lbtxtThanks.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lbtxtThanks.setBounds(337, 311, 128, 30);
+		PanelMain.add(lbtxtThanks);
 	}
 
 }
