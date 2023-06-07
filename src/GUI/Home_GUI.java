@@ -9,8 +9,15 @@ import java.awt.Toolkit;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Frame;
+
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class Home_GUI extends JFrame {
 
@@ -66,7 +73,7 @@ public class Home_GUI extends JFrame {
 		
 		JLabel lblCpNhpTi = new JLabel("Tài khoản");
 		lblCpNhpTi.setForeground(Color.WHITE);
-		lblCpNhpTi.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblCpNhpTi.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblCpNhpTi.setBounds(85, 90, 83, 30);
 		panelMenu.add(lblCpNhpTi);
 		
@@ -83,7 +90,7 @@ public class Home_GUI extends JFrame {
 		JLabel lblBnHng = new JLabel("Bán hàng");
 		lblBnHng.setForeground(Color.WHITE);
 		lblBnHng.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblBnHng.setBounds(85, 140, 83, 30);
+		lblBnHng.setBounds(87, 430, 83, 30);
 		panelMenu.add(lblBnHng);
 		
 		JLabel iconCompany = new JLabel("");
@@ -98,15 +105,9 @@ public class Home_GUI extends JFrame {
 		panelMenu.add(lbNameCompany);
 		
 		JLabel lblNewLabel_2_1_1 = new JLabel("");
-		lblNewLabel_2_1_1.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconLogout24px.png"));
+		lblNewLabel_2_1_1.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconGroup24px.png"));
 		lblNewLabel_2_1_1.setBounds(50, 190, 24, 24);
 		panelMenu.add(lblNewLabel_2_1_1);
-		
-		JLabel lblBnHng_1 = new JLabel("Bán hàng");
-		lblBnHng_1.setForeground(Color.WHITE);
-		lblBnHng_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblBnHng_1.setBounds(85, 190, 83, 30);
-		panelMenu.add(lblBnHng_1);
 		
 		JLabel lblNewLabel_2_1_1_1 = new JLabel("");
 		lblNewLabel_2_1_1_1.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconCart24px.png"));
@@ -151,6 +152,26 @@ public class Home_GUI extends JFrame {
 		lblBnHng_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblBnHng_1_1_2.setBounds(85, 340, 83, 30);
 		panelMenu.add(lblBnHng_1_1_2);
+		
+		JComboBox cbSell_1 = new JComboBox();
+		cbSell_1.setModel(new DefaultComboBoxModel(new String[] {"Đối tác", "Đại lý", "Khách hàng"}));
+		cbSell_1.setForeground(Color.BLACK);
+		cbSell_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		cbSell_1.setBackground(Color.WHITE);
+		cbSell_1.setBounds(85, 190, 120, 24);
+		panelMenu.add(cbSell_1);
+		
+		JComboBox cbSell_1_1 = new JComboBox();
+		cbSell_1_1.setModel(new DefaultComboBoxModel(new String[] {"Bán hàng", "Tạo hóa đơn", "Tạo Voucher"}));
+		cbSell_1_1.setForeground(Color.BLACK);
+		cbSell_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		cbSell_1_1.setBackground(Color.WHITE);
+		cbSell_1_1.setBounds(85, 140, 120, 24);
+		panelMenu.add(cbSell_1_1);
+        
+//        JMenu submenu = new JMenu("Submenu");
+        JMenuItem subItem1 = new JMenuItem("Subitem 1");
+        JMenuItem subItem2 = new JMenuItem("Subitem 2");
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\store512px.png"));
