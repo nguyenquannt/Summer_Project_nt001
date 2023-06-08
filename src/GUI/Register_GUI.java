@@ -61,7 +61,7 @@ public class Register_GUI extends JFrame {
 		panel_Left.setLayout(null);
 		
 		JLabel iconCompany = new JLabel("");
-		iconCompany.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\icon_Company48px.png"));
+		iconCompany.setIcon(new ImageIcon(Register_GUI.class.getResource("/Images/icon_Company48px.png")));
 		iconCompany.setBounds(16, 16, 48, 48);
 		panel_Left.add(iconCompany);
 		
@@ -97,12 +97,12 @@ public class Register_GUI extends JFrame {
 		jtfUsername.setColumns(10);
 		
 		JLabel iconUser = new JLabel("");
-		iconUser.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconUsername24px.png"));
+		iconUser.setIcon(new ImageIcon(Register_GUI.class.getResource("/Images/iconUsername24px.png")));
 		iconUser.setBounds(160, 246, 24, 24);
 		panel_Right.add(iconUser);
 		
 		JLabel iconPass = new JLabel("");
-		iconPass.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconPass24px.png"));
+		iconPass.setIcon(new ImageIcon(Register_GUI.class.getResource("/Images/iconPass24px.png")));
 		iconPass.setBounds(160, 300, 24, 24);
 		panel_Right.add(iconPass);
 		
@@ -119,7 +119,7 @@ public class Register_GUI extends JFrame {
 		panel_Right.add(lbTitleRegister);
 		
 		JLabel iconConfirmPassword = new JLabel("");
-		iconConfirmPassword.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconPass24px.png"));
+		iconConfirmPassword.setIcon(new ImageIcon(Register_GUI.class.getResource("/Images/iconPass24px.png")));
 		iconConfirmPassword.setBounds(160, 355, 24, 24);
 		panel_Right.add(iconConfirmPassword);
 		
