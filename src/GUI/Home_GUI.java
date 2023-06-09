@@ -6,6 +6,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.security.PublicKey;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -22,6 +26,8 @@ import javax.swing.JMenuItem;
 public class Home_GUI extends JFrame {
 
 	private JPanel panelMain;
+//	test
+	private Login_GUI loginGUI;
 
 	/**
 	 * Launch the application.
@@ -178,9 +184,17 @@ public class Home_GUI extends JFrame {
 		imgHome.setIcon(new ImageIcon(Home_GUI.class.getResource("/Images/store512px.png")));
 		imgHome.setBounds(0, 5, 925, 658);
 		panelRight.add(imgHome);
-        
-//        JMenu submenu = new JMenu("Submenu");
-        JMenuItem subItem1 = new JMenuItem("Subitem 1");
-        JMenuItem subItem2 = new JMenuItem("Subitem 2");
+		
+//		test
+		lbAccount.addMouseListener(new MouseAdapter() {
+		    @Override
+		    public void mouseClicked(MouseEvent e) {
+		        if (loginGUI == null) {
+		            loginGUI = new Login_GUI();
+		        }
+		        loginGUI.setVisible(true);
+//		        dispose(); tắt jframe trước đó
+		    }
+		});
 	}
 }

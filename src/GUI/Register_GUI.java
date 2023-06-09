@@ -45,7 +45,7 @@ public class Register_GUI extends JFrame {
 	public Register_GUI() {
 		setResizable(false);
 		setTitle("Đăng ký tài khoản");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconLogin24px.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconLogo24px.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 700);
 		container = new JPanel();
