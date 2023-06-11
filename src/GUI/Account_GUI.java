@@ -61,21 +61,21 @@ public class Account_GUI extends JFrame {
 		
 		JLabel iconCompany = new JLabel("");
 		iconCompany.setIcon(new ImageIcon(Account_GUI.class.getResource("/Images/icon_Company48px.png")));
-		iconCompany.setBounds(100, 230, 48, 48);
+		iconCompany.setBounds(100, 250, 48, 48);
 		panelLeft.add(iconCompany);
 		
 		JLabel lbName1 = new JLabel("NGUYENQUAN");
 		lbName1.setHorizontalAlignment(SwingConstants.CENTER);
 		lbName1.setForeground(Color.WHITE);
 		lbName1.setFont(new Font("Tahoma", Font.PLAIN, 35));
-		lbName1.setBounds(10, 277, 240, 40);
+		lbName1.setBounds(10, 300, 240, 40);
 		panelLeft.add(lbName1);
 		
 		JLabel lbName2 = new JLabel("COMPANY");
 		lbName2.setHorizontalAlignment(SwingConstants.CENTER);
 		lbName2.setForeground(new Color(226, 153, 48));
 		lbName2.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lbName2.setBounds(10, 314, 240, 40);
+		lbName2.setBounds(10, 340, 240, 40);
 		panelLeft.add(lbName2);
 		
 		JLabel lbTitle = new JLabel("CẬP NHẬP THÔNG TIN TÀI KHOẢN");
