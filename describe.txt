@@ -29,3 +29,10 @@ ID String
 Tên SP String
 Số Lượng int
 Đơn giá double
+----------------
+GUI
+Tài khoản - Account_GUI
+Tạo hóa đơn - CreateInvoice_GUI
+Tạo Voucher - CreateVoucher_GUI
+Đại lý - Agency_GUI
+Khách hàng -

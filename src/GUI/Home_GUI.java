@@ -50,7 +50,7 @@ public class Home_GUI extends JFrame {
 	 */
 	public Home_GUI() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconHome24px.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Home_GUI.class.getResource("/Images/iconLogo24px.png")));
 		setTitle("Trang chủ\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 700);
@@ -173,6 +173,17 @@ public class Home_GUI extends JFrame {
 		iconLogout.setIcon(new ImageIcon(Home_GUI.class.getResource("/Images/iconLogout24px.png")));
 		iconLogout.setBounds(50, 580, 24, 24);
 		panelLeft.add(iconLogout);
+		
+		JLabel lbUserManual = new JLabel("Hướng dẫn sử dụng");
+		lbUserManual.setForeground(Color.WHITE);
+		lbUserManual.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbUserManual.setBounds(85, 440, 152, 30);
+		panelLeft.add(lbUserManual);
+		
+		JLabel iconUserManual = new JLabel("");
+		iconUserManual.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconDocument24px.png"));
+		iconUserManual.setBounds(50, 440, 24, 24);
+		panelLeft.add(iconUserManual);
 		
 		JPanel panelRight = new JPanel();
 		panelRight.setBounds(261, 0, 925, 663);
