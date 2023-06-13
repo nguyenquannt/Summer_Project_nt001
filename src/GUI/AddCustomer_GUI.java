@@ -10,17 +10,17 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 
-public class AddAgency_GUI extends JFrame {
+public class AddCustomer_GUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtIDAgency;
-	private JTextField txtNameAgency;
-	private JTextField txtEmailAgency;
-	private JTextField txtTypeAgency;
+	private JTextField txtID;
+	private JTextField txtName;
+	private JTextField txtPhone;
+	private JTextField txtEmail;
 
 	/**
 	 * Launch the application.
@@ -29,7 +29,7 @@ public class AddAgency_GUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AddAgency_GUI frame = new AddAgency_GUI();
+					AddCustomer_GUI frame = new AddCustomer_GUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,9 +41,9 @@ public class AddAgency_GUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AddAgency_GUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(AddAgency_GUI.class.getResource("/Images/iconLogo24px.png")));
-		setTitle("Thêm đại lý");
+	public AddCustomer_GUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(AddCustomer_GUI.class.getResource("/Images/iconLogo24px.png")));
+		setTitle("Thêm khách hàng");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 700);
@@ -60,7 +60,7 @@ public class AddAgency_GUI extends JFrame {
 		contentPane.add(panelLeft);
 		
 		JLabel iconCompany = new JLabel("");
-		iconCompany.setIcon(new ImageIcon(AddAgency_GUI.class.getResource("/Images/icon_Company48px.png")));
+		iconCompany.setIcon(new ImageIcon(AddCustomer_GUI.class.getResource("/Images/icon_Company48px.png")));
 		iconCompany.setBounds(100, 250, 48, 48);
 		panelLeft.add(iconCompany);
 		
@@ -78,11 +78,11 @@ public class AddAgency_GUI extends JFrame {
 		lbName2.setBounds(10, 340, 240, 40);
 		panelLeft.add(lbName2);
 		
-		JLabel lblThmiL = new JLabel("THÊM ĐẠI LÝ");
-		lblThmiL.setHorizontalAlignment(SwingConstants.CENTER);
-		lblThmiL.setFont(new Font("Tahoma", Font.PLAIN, 35));
-		lblThmiL.setBounds(261, 0, 925, 100);
-		contentPane.add(lblThmiL);
+		JLabel lbTitle = new JLabel("THÊM NHÂN VIÊN");
+		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lbTitle.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lbTitle.setBounds(261, 0, 925, 100);
+		contentPane.add(lbTitle);
 		
 		JPanel panelRight = new JPanel();
 		panelRight.setLayout(null);
@@ -101,45 +101,45 @@ public class AddAgency_GUI extends JFrame {
 		btnExit.setBounds(780, 500, 100, 35);
 		panelRight.add(btnExit);
 		
-		JLabel lbIDAgency = new JLabel("ID đại lý  (*)");
-		lbIDAgency.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbIDAgency.setBounds(70, 50, 100, 20);
-		panelRight.add(lbIDAgency);
+		JLabel lbIDCustomer = new JLabel("ID khách hàng  (*)");
+		lbIDCustomer.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbIDCustomer.setBounds(70, 50, 134, 20);
+		panelRight.add(lbIDCustomer);
 		
-		txtIDAgency = new JTextField();
-		txtIDAgency.setColumns(10);
-		txtIDAgency.setBounds(311, 48, 400, 30);
-		panelRight.add(txtIDAgency);
+		txtID = new JTextField();
+		txtID.setColumns(10);
+		txtID.setBounds(311, 48, 400, 30);
+		panelRight.add(txtID);
 		
-		JLabel lbNameAgency = new JLabel("Tên đại lý  (*)");
-		lbNameAgency.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbNameAgency.setBounds(70, 120, 120, 20);
-		panelRight.add(lbNameAgency);
+		JLabel lbNameCustomer = new JLabel("Tên khách hàng  (*)");
+		lbNameCustomer.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbNameCustomer.setBounds(70, 120, 150, 20);
+		panelRight.add(lbNameCustomer);
 		
-		txtNameAgency = new JTextField();
-		txtNameAgency.setColumns(10);
-		txtNameAgency.setBounds(311, 118, 400, 30);
-		panelRight.add(txtNameAgency);
+		txtName = new JTextField();
+		txtName.setColumns(10);
+		txtName.setBounds(311, 118, 400, 30);
+		panelRight.add(txtName);
 		
-		JLabel lbEmailAgency = new JLabel("Email  (*)");
-		lbEmailAgency.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbEmailAgency.setBounds(70, 210, 100, 20);
-		panelRight.add(lbEmailAgency);
+		JLabel lbPhone = new JLabel("Số điện thoại (*)");
+		lbPhone.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbPhone.setBounds(70, 210, 150, 20);
+		panelRight.add(lbPhone);
 		
-		txtEmailAgency = new JTextField();
-		txtEmailAgency.setColumns(10);
-		txtEmailAgency.setBounds(311, 208, 400, 30);
-		panelRight.add(txtEmailAgency);
+		txtPhone = new JTextField();
+		txtPhone.setColumns(10);
+		txtPhone.setBounds(311, 208, 400, 30);
+		panelRight.add(txtPhone);
 		
-		JLabel lbTypeAgency = new JLabel("Loại mặt hàng cung cấp (*) ");
-		lbTypeAgency.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbTypeAgency.setBounds(70, 280, 215, 20);
-		panelRight.add(lbTypeAgency);
+		JLabel lbEmail = new JLabel("Email (*)");
+		lbEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbEmail.setBounds(70, 280, 200, 20);
+		panelRight.add(lbEmail);
 		
-		txtTypeAgency = new JTextField();
-		txtTypeAgency.setColumns(10);
-		txtTypeAgency.setBounds(311, 278, 400, 30);
-		panelRight.add(txtTypeAgency);
+		txtEmail = new JTextField();
+		txtEmail.setColumns(10);
+		txtEmail.setBounds(311, 278, 400, 30);
+		panelRight.add(txtEmail);
 		
 		JLabel lblLuCc = new JLabel("Lưu ý: Các ô thông tin chứa (*) là thông tin bắt buộc phải nhập !");
 		lblLuCc.setHorizontalAlignment(SwingConstants.LEFT);
@@ -147,4 +147,5 @@ public class AddAgency_GUI extends JFrame {
 		lblLuCc.setBounds(70, 350, 746, 28);
 		panelRight.add(lblLuCc);
 	}
+
 }

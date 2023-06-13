@@ -222,4 +222,4 @@ public class CreateInvoice_GUI extends JFrame {
 		panelRight.add(table);
 	}
 }
-// Surroud With để mwor jtable
+// Surroud With để mở jtable

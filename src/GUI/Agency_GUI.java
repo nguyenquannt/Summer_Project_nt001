@@ -100,7 +100,7 @@ public class Agency_GUI extends JFrame {
 		
 		JLabel lbSearch = new JLabel("Tìm kiếm đại lý:");
 		lbSearch.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbSearch.setBounds(295, 121, 125, 24);
+		lbSearch.setBounds(295, 120, 125, 24);
 		contentPane.add(lbSearch);
 		
 		txtSearch = new JTextField();
@@ -112,7 +112,7 @@ public class Agency_GUI extends JFrame {
 		btnSearch.setIcon(new ImageIcon("D:\\NguyenQuan_Code\\Code_Nam_3\\Summer_Project_nt001\\src\\Images\\iconSearch24px.png"));
 		btnSearch.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnSearch.setBackground(new Color(0, 255, 153));
-		btnSearch.setBounds(779, 110, 120, 35);
+		btnSearch.setBounds(780, 110, 120, 35);
 		contentPane.add(btnSearch);
 		
 		table = new JTable();
