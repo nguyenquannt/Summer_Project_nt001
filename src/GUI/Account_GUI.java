@@ -102,8 +102,8 @@ public class Account_GUI extends JFrame {
 		panelRight.add(btnExit);
 		
 		JLabel lbNameCom = new JLabel("Tên công ty  (*)");
-		lbNameCom.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lbNameCom.setBounds(50, 30, 100, 14);
+		lbNameCom.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbNameCom.setBounds(50, 30, 120, 20);
 		panelRight.add(lbNameCom);
 		
 		txtCom = new JTextField();
@@ -112,8 +112,8 @@ public class Account_GUI extends JFrame {
 		panelRight.add(txtCom);
 		
 		JLabel lbPhone = new JLabel("Số điện thoại (*)");
-		lbPhone.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lbPhone.setBounds(50, 120, 100, 14);
+		lbPhone.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbPhone.setBounds(50, 120, 130, 20);
 		panelRight.add(lbPhone);
 		
 		txtPhone = new JTextField();
@@ -122,8 +122,8 @@ public class Account_GUI extends JFrame {
 		panelRight.add(txtPhone);
 		
 		JLabel lbEmail = new JLabel("Email  (*)");
-		lbEmail.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lbEmail.setBounds(50, 210, 100, 14);
+		lbEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbEmail.setBounds(50, 210, 100, 20);
 		panelRight.add(lbEmail);
 		
 		txtEmail = new JTextField();
@@ -131,9 +131,9 @@ public class Account_GUI extends JFrame {
 		txtEmail.setBounds(50, 230, 400, 30);
 		panelRight.add(txtEmail);
 		
-		JLabel lbAddress = new JLabel("Địa chỉl  (*)");
-		lbAddress.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lbAddress.setBounds(50, 300, 100, 14);
+		JLabel lbAddress = new JLabel("Địa chỉ  (*)");
+		lbAddress.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbAddress.setBounds(50, 300, 100, 20);
 		panelRight.add(lbAddress);
 		
 		txtAddress = new JTextField();
@@ -147,13 +147,13 @@ public class Account_GUI extends JFrame {
 		panelRight.add(txtPass);
 		
 		JLabel lbPass = new JLabel("Mật khẩu  (*)");
-		lbPass.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lbPass.setBounds(490, 30, 100, 14);
+		lbPass.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbPass.setBounds(490, 30, 100, 20);
 		panelRight.add(lbPass);
 		
 		JLabel lbConfirmPass = new JLabel("Nhập lại mật khẩu  (*)");
-		lbConfirmPass.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lbConfirmPass.setBounds(490, 120, 144, 14);
+		lbConfirmPass.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbConfirmPass.setBounds(490, 120, 170, 20);
 		panelRight.add(lbConfirmPass);
 		
 		txtConfirmPass = new JTextField();

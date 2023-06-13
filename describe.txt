@@ -23,16 +23,24 @@ Yêu cầu chức năng :
 + Thống kê mặt hàng bán chạy, tồn kho (top 5, 10, 15, 20)
 
 ------
-CSDL
+CSDL Hóa đơn
 Table Hóa đơn
 ID String
 Tên SP String
 Số Lượng int
 Đơn giá double
+
+CSDL Đại lý
+ID String
+Tên đại lý String
+Email
+Nhóm sản phẩm cung cấp String
+
+
 ----------------
 GUI
 Tài khoản - Account_GUI
 Tạo hóa đơn - CreateInvoice_GUI
 Tạo Voucher - CreateVoucher_GUI
-Đại lý - Agency_GUI
+Đại lý - Agency_GUI - AddAgency_GUI
 Khách hàng -
