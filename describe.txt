@@ -40,15 +40,16 @@ CSDL Sản phẩm dịch vụ
 ID String
 Tên hàng hóa String
 Nhóm sản phẩm String
-Mã vạch String
-Giá vốn Double
 Giá bán Double
 
 CSDL - Kho
 ID String 
 Tên sản phẩm String
+Nhóm sản phẩm String
 Số lương Int
 Tồn kho Int
+Giá vốn Double
+Giá bán Double
 Nhà cung cấp String
 
 ----------------
@@ -58,4 +59,5 @@ Tạo hóa đơn - CreateInvoice_GUI
 Tạo Voucher - CreateVoucher_GUI
 Đại lý - Agency_GUI - AddAgency_GUI
 Khách hàng - Customer_GUI - AddCustomer_GUI
-Sản phẩm và dịch vụ - ProductAndSevices_GUI - AddProductAndSevices
+Sản phẩm và dịch vụ - ProductAndSevices_GUI
+Quản lý kho - Warehouse_GUI - AddWarehouse_GUI

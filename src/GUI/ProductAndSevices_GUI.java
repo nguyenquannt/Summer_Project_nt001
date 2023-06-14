@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JComboBox;
 
 public class ProductAndSevices_GUI extends JFrame {
 
@@ -97,65 +98,42 @@ public class ProductAndSevices_GUI extends JFrame {
 		txtSearch = new JTextField();
 		txtSearch.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtSearch.setColumns(10);
-		txtSearch.setBounds(160, 130, 321, 35);
+		txtSearch.setBounds(239, 130, 501, 30);
 		panelRight.add(txtSearch);
 		
 		JButton btnSearch = new JButton("Tìm kiếm");
 		btnSearch.setIcon(new ImageIcon(ProductAndSevices_GUI.class.getResource("/Images/iconSearch24px.png")));
 		btnSearch.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnSearch.setBackground(new Color(0, 255, 153));
-		btnSearch.setBounds(510, 130, 120, 35);
+		btnSearch.setBounds(790, 129, 120, 35);
 		panelRight.add(btnSearch);
-		
-		JButton btnInputFile = new JButton("Nhập file");
-		btnInputFile.setIcon(new ImageIcon(ProductAndSevices_GUI.class.getResource("/Images/iconInputFile.png")));
-		btnInputFile.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnInputFile.setBackground(new Color(226, 153, 46));
-		btnInputFile.setBounds(650, 130, 120, 35);
-		panelRight.add(btnInputFile);
-		
-		JButton btnOutputFile = new JButton("Xuất file");
-		btnOutputFile.setIcon(new ImageIcon(ProductAndSevices_GUI.class.getResource("/Images/iconOutputFile24px.png")));
-		btnOutputFile.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnOutputFile.setBackground(Color.LIGHT_GRAY);
-		btnOutputFile.setBounds(790, 130, 120, 35);
-		panelRight.add(btnOutputFile);
 		
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
 			new String[] {
-				"ID", "T\u00EAn s\u1EA3n ph\u1EA9m", "Nh\u00F3m s\u1EA3n ph\u1EA9m", "M\u00E3 v\u1EA1ch", "Gi\u00E1 v\u1ED1n", "Gi\u00E1 b\u00E1n"
+				"ID", "T\u00EAn s\u1EA3n ph\u1EA9m", "Nh\u00F3m s\u1EA3n ph\u1EA9m", "Gi\u00E1 b\u00E1n"
 			}
 		) {
 			Class[] columnTypes = new Class[] {
-				String.class, String.class, String.class, String.class, Double.class, Double.class
+				String.class, String.class, String.class, Double.class
 			};
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
 			}
 		});
-		table.setBounds(30, 203, 880, 390);
+		table.setBounds(30, 244, 880, 389);
 		panelRight.add(table);
 		
-		JButton btnDel = new JButton("Xóa SP");
-		btnDel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnDel.setBackground(new Color(153, 153, 255));
-		btnDel.setBounds(790, 618, 120, 35);
-		panelRight.add(btnDel);
+		JLabel lblLocTheoNhm = new JLabel("Loc theo nhóm sản phẩm:");
+		lblLocTheoNhm.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblLocTheoNhm.setBounds(30, 190, 198, 20);
+		panelRight.add(lblLocTheoNhm);
 		
-		JButton btnEdit = new JButton("Sửa thông tin");
-		btnEdit.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnEdit.setBackground(new Color(153, 153, 255));
-		btnEdit.setBounds(650, 618, 120, 35);
-		panelRight.add(btnEdit);
-		
-		JButton btnAdd = new JButton("Thêm SP");
-		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnAdd.setBackground(new Color(153, 153, 255));
-		btnAdd.setBounds(510, 618, 120, 35);
-		panelRight.add(btnAdd);
+		JComboBox cbSearchAgency = new JComboBox();
+		cbSearchAgency.setBounds(239, 189, 170, 26);
+		panelRight.add(cbSearchAgency);
 	}
 
 }

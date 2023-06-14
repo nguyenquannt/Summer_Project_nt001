@@ -158,6 +158,13 @@ public class Warehouse_GUI extends JFrame {
 		btnAdd.setBackground(new Color(153, 153, 255));
 		btnAdd.setBounds(485, 618, 120, 35);
 		panelRight.add(btnAdd);
+		
+		JButton btnInputFile = new JButton("Nhập file");
+		btnInputFile.setIcon(new ImageIcon(Warehouse_GUI.class.getResource("/Images/iconInputFile.png")));
+		btnInputFile.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnInputFile.setBackground(new Color(226, 153, 46));
+		btnInputFile.setBounds(640, 110, 120, 35);
+		panelRight.add(btnInputFile);
 	}
 	private static class __Tmp {
 		private static void __tmp() {

@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Toolkit;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -15,23 +14,27 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 
-public class AddProductAndSevices_GUI extends JFrame {
+public class AddProductToWarehouse_GUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtID;
 	private JTextField txtName;
-	private JTextField txtBarcode;
+	private JTextField txtNumber;
 	private JTextField txtCostPrice;
 	private JTextField txtSellingPrice;
+	private JTextField txtInvntory;
+	private JTextField txtAgency;
+	private JTextField txtType;
 
 	/**
 	 * Launch the application.
+	 * Thêm sản phẩm vào kho
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AddProductAndSevices_GUI frame = new AddProductAndSevices_GUI();
+					AddProductToWarehouse_GUI frame = new AddProductToWarehouse_GUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,9 +46,8 @@ public class AddProductAndSevices_GUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AddProductAndSevices_GUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(AddProductAndSevices_GUI.class.getResource("/Images/iconLogo24px.png")));
-		setTitle("Thêm sản phẩm - dịch vụ");
+	public AddProductToWarehouse_GUI() {
+		setTitle("Thêm sản phẩm vào kho");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 700);
@@ -62,7 +64,7 @@ public class AddProductAndSevices_GUI extends JFrame {
 		contentPane.add(panelLeft);
 		
 		JLabel iconCompany = new JLabel("");
-		iconCompany.setIcon(new ImageIcon(AddProductAndSevices_GUI.class.getResource("/Images/icon_Company48px.png")));
+		iconCompany.setIcon(new ImageIcon(AddProductToWarehouse_GUI.class.getResource("/Images/icon_Company48px.png")));
 		iconCompany.setBounds(100, 250, 48, 48);
 		panelLeft.add(iconCompany);
 		
@@ -80,7 +82,7 @@ public class AddProductAndSevices_GUI extends JFrame {
 		lbName2.setBounds(10, 340, 240, 40);
 		panelLeft.add(lbName2);
 		
-		JLabel lbTitle = new JLabel("THÊM SẢN PHẨM - DỊCH VỤ");
+		JLabel lbTitle = new JLabel("THÊM SẢN PHẨM - DỊCH VỤ MỚI");
 		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lbTitle.setFont(new Font("Tahoma", Font.PLAIN, 35));
 		lbTitle.setBounds(261, 0, 925, 100);
@@ -105,67 +107,83 @@ public class AddProductAndSevices_GUI extends JFrame {
 		
 		JLabel lbID = new JLabel("ID sản phẩm - dịch vụ  (*)");
 		lbID.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbID.setBounds(70, 50, 200, 20);
+		lbID.setBounds(70, 30, 200, 20);
 		panelRight.add(lbID);
 		
 		txtID = new JTextField();
 		txtID.setColumns(10);
-		txtID.setBounds(311, 48, 400, 30);
+		txtID.setBounds(311, 28, 400, 30);
 		panelRight.add(txtID);
 		
 		JLabel lbName = new JLabel("Tên sản phẩm - dịch vụ  (*)");
 		lbName.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbName.setBounds(70, 120, 215, 20);
+		lbName.setBounds(70, 90, 215, 20);
 		panelRight.add(lbName);
 		
 		txtName = new JTextField();
 		txtName.setColumns(10);
-		txtName.setBounds(311, 118, 400, 30);
+		txtName.setBounds(311, 88, 400, 30);
 		panelRight.add(txtName);
 		
 		JLabel lbType = new JLabel("Nhóm sản phẩm  (*)");
 		lbType.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbType.setBounds(70, 190, 191, 20);
+		lbType.setBounds(70, 150, 191, 20);
 		panelRight.add(lbType);
 		
-		JLabel lbBarcode = new JLabel("Mã vạch (*) ");
-		lbBarcode.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbBarcode.setBounds(70, 260, 215, 20);
-		panelRight.add(lbBarcode);
+		JLabel lbNumber = new JLabel("Số lượng  (*) ");
+		lbNumber.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbNumber.setBounds(70, 210, 215, 20);
+		panelRight.add(lbNumber);
 		
-		txtBarcode = new JTextField();
-		txtBarcode.setColumns(10);
-		txtBarcode.setBounds(311, 250, 400, 30);
-		panelRight.add(txtBarcode);
+		txtNumber = new JTextField();
+		txtNumber.setColumns(10);
+		txtNumber.setBounds(311, 208, 400, 30);
+		panelRight.add(txtNumber);
 		
-		JLabel lblLuCc = new JLabel("Lưu ý: Các ô thông tin chứa (*) là thông tin bắt buộc phải nhập !");
-		lblLuCc.setHorizontalAlignment(SwingConstants.LEFT);
-		lblLuCc.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblLuCc.setBounds(70, 462, 746, 28);
-		panelRight.add(lblLuCc);
-		
-		JComboBox cbType = new JComboBox();
-		cbType.setBounds(311, 180, 170, 30);
-		panelRight.add(cbType);
-		
-		JLabel lbCostPrice = new JLabel("Giá vốn (*) ");
+		JLabel lbCostPrice = new JLabel("Giá vốn  (*) ");
 		lbCostPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbCostPrice.setBounds(70, 340, 215, 20);
+		lbCostPrice.setBounds(70, 330, 215, 20);
 		panelRight.add(lbCostPrice);
 		
-		JLabel lbSellingPrice = new JLabel("Giá bán (*) ");
+		JLabel lbSellingPrice = new JLabel("Giá bán  (*) ");
 		lbSellingPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbSellingPrice.setBounds(70, 410, 215, 20);
+		lbSellingPrice.setBounds(70, 390, 215, 20);
 		panelRight.add(lbSellingPrice);
 		
 		txtCostPrice = new JTextField();
 		txtCostPrice.setColumns(10);
-		txtCostPrice.setBounds(311, 330, 400, 30);
+		txtCostPrice.setBounds(311, 328, 400, 30);
 		panelRight.add(txtCostPrice);
 		
 		txtSellingPrice = new JTextField();
 		txtSellingPrice.setColumns(10);
-		txtSellingPrice.setBounds(311, 400, 400, 30);
+		txtSellingPrice.setBounds(311, 388, 400, 30);
 		panelRight.add(txtSellingPrice);
+		
+		JLabel lbInventory = new JLabel("Tồn kho  (*) ");
+		lbInventory.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbInventory.setBounds(70, 270, 215, 20);
+		panelRight.add(lbInventory);
+		
+		txtInvntory = new JTextField();
+		txtInvntory.setColumns(10);
+		txtInvntory.setBounds(311, 268, 400, 30);
+		panelRight.add(txtInvntory);
+		
+		JLabel lbAgency = new JLabel("Nhà cung cấp  (*) ");
+		lbAgency.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbAgency.setBounds(70, 450, 215, 20);
+		panelRight.add(lbAgency);
+		
+		txtAgency = new JTextField();
+		txtAgency.setColumns(10);
+		txtAgency.setBounds(311, 440, 400, 30);
+		panelRight.add(txtAgency);
+		
+		txtType = new JTextField();
+		txtType.setColumns(10);
+		txtType.setBounds(311, 148, 400, 30);
+		panelRight.add(txtType);
 	}
+
 }
