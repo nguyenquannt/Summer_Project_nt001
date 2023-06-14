@@ -44,6 +44,13 @@ Mã vạch String
 Giá vốn Double
 Giá bán Double
 
+CSDL - Kho
+ID String 
+Tên sản phẩm String
+Số lương Int
+Tồn kho Int
+Nhà cung cấp String
+
 ----------------
 GUI
 Tài khoản - Account_GUI
