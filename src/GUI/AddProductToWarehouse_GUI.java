@@ -22,7 +22,6 @@ public class AddProductToWarehouse_GUI extends JFrame {
 	private JTextField txtNumber;
 	private JTextField txtCostPrice;
 	private JTextField txtSellingPrice;
-	private JTextField txtInvntory;
 	private JTextField txtAgency;
 	private JTextField txtType;
 
@@ -142,42 +141,32 @@ public class AddProductToWarehouse_GUI extends JFrame {
 		
 		JLabel lbCostPrice = new JLabel("Giá vốn  (*) ");
 		lbCostPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbCostPrice.setBounds(70, 330, 215, 20);
+		lbCostPrice.setBounds(70, 270, 215, 20);
 		panelRight.add(lbCostPrice);
 		
 		JLabel lbSellingPrice = new JLabel("Giá bán  (*) ");
 		lbSellingPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbSellingPrice.setBounds(70, 390, 215, 20);
+		lbSellingPrice.setBounds(70, 330, 215, 20);
 		panelRight.add(lbSellingPrice);
 		
 		txtCostPrice = new JTextField();
 		txtCostPrice.setColumns(10);
-		txtCostPrice.setBounds(311, 328, 400, 30);
+		txtCostPrice.setBounds(311, 268, 400, 30);
 		panelRight.add(txtCostPrice);
 		
 		txtSellingPrice = new JTextField();
 		txtSellingPrice.setColumns(10);
-		txtSellingPrice.setBounds(311, 388, 400, 30);
+		txtSellingPrice.setBounds(311, 328, 400, 30);
 		panelRight.add(txtSellingPrice);
-		
-		JLabel lbInventory = new JLabel("Tồn kho  (*) ");
-		lbInventory.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbInventory.setBounds(70, 270, 215, 20);
-		panelRight.add(lbInventory);
-		
-		txtInvntory = new JTextField();
-		txtInvntory.setColumns(10);
-		txtInvntory.setBounds(311, 268, 400, 30);
-		panelRight.add(txtInvntory);
 		
 		JLabel lbAgency = new JLabel("Nhà cung cấp  (*) ");
 		lbAgency.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbAgency.setBounds(70, 450, 215, 20);
+		lbAgency.setBounds(70, 390, 215, 20);
 		panelRight.add(lbAgency);
 		
 		txtAgency = new JTextField();
 		txtAgency.setColumns(10);
-		txtAgency.setBounds(311, 440, 400, 30);
+		txtAgency.setBounds(311, 388, 400, 30);
 		panelRight.add(txtAgency);
 		
 		txtType = new JTextField();

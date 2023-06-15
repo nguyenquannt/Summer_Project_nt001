@@ -16,7 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class Customer_GUI extends JFrame {
+public class Staff_GUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtSearch;
@@ -29,7 +29,7 @@ public class Customer_GUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Customer_GUI frame = new Customer_GUI();
+					Staff_GUI frame = new Staff_GUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,9 +41,9 @@ public class Customer_GUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Customer_GUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Customer_GUI.class.getResource("/Images/iconLogo24px.png")));
-		setTitle("Danh sách khách hàng");
+	public Staff_GUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Staff_GUI.class.getResource("/Images/iconLogo24px.png")));
+		setTitle("Quản lý nhân viên");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 700);
@@ -60,7 +60,7 @@ public class Customer_GUI extends JFrame {
 		contentPane.add(panelLeft);
 		
 		JLabel iconCompany = new JLabel("");
-		iconCompany.setIcon(new ImageIcon(Customer_GUI.class.getResource("/Images/icon_Company48px.png")));
+		iconCompany.setIcon(new ImageIcon(Staff_GUI.class.getResource("/Images/icon_Company48px.png")));
 		iconCompany.setBounds(100, 250, 48, 48);
 		panelLeft.add(iconCompany);
 		
@@ -78,77 +78,82 @@ public class Customer_GUI extends JFrame {
 		lbName2.setBounds(10, 340, 240, 40);
 		panelLeft.add(lbName2);
 		
-		JLabel lblDanhSchKhch = new JLabel("DANH SÁCH KHÁCH HÀNG");
-		lblDanhSchKhch.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDanhSchKhch.setFont(new Font("Tahoma", Font.PLAIN, 35));
-		lblDanhSchKhch.setBounds(261, 0, 925, 100);
-		contentPane.add(lblDanhSchKhch);
+		JPanel panelRight = new JPanel();
+		panelRight.setBounds(261, 0, 925, 663);
+		contentPane.add(panelRight);
+		panelRight.setLayout(null);
+		
+		JLabel lbTitle = new JLabel("DANH SÁCH NHÂN VIÊN");
+		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lbTitle.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lbTitle.setBounds(0, 0, 925, 100);
+		panelRight.add(lbTitle);
 		
 		JLabel lbCustomer = new JLabel("Tìm khách hàng:");
 		lbCustomer.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lbCustomer.setBounds(295, 120, 125, 24);
-		contentPane.add(lbCustomer);
+		lbCustomer.setBounds(20, 113, 120, 24);
+		panelRight.add(lbCustomer);
 		
 		txtSearch = new JTextField();
 		txtSearch.setColumns(10);
-		txtSearch.setBounds(430, 110, 321, 35);
-		contentPane.add(txtSearch);
+		txtSearch.setBounds(150, 110, 321, 35);
+		panelRight.add(txtSearch);
 		
 		JButton btnSearch = new JButton("Tìm kiếm");
-		btnSearch.setIcon(new ImageIcon(Customer_GUI.class.getResource("/Images/iconSearch24px.png")));
+		btnSearch.setIcon(new ImageIcon(Staff_GUI.class.getResource("/Images/iconSearch24px.png")));
 		btnSearch.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnSearch.setBackground(new Color(0, 255, 153));
-		btnSearch.setBounds(780, 110, 120, 35);
-		contentPane.add(btnSearch);
+		btnSearch.setBounds(505, 110, 120, 35);
+		panelRight.add(btnSearch);
 		
 		JButton btnInputFile = new JButton("Nhập file");
-		btnInputFile.setIcon(new ImageIcon(Customer_GUI.class.getResource("/Images/iconInputFile.png")));
+		btnInputFile.setIcon(new ImageIcon(Staff_GUI.class.getResource("/Images/iconInputFile.png")));
 		btnInputFile.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnInputFile.setBackground(new Color(226, 153, 46));
-		btnInputFile.setBounds(920, 110, 120, 35);
-		contentPane.add(btnInputFile);
+		btnInputFile.setBounds(650, 110, 120, 35);
+		panelRight.add(btnInputFile);
 		
 		JButton btnOutputFile = new JButton("Xuất file");
-		btnOutputFile.setIcon(new ImageIcon(Customer_GUI.class.getResource("/Images/iconOutputFile24px.png")));
+		btnOutputFile.setIcon(new ImageIcon(Staff_GUI.class.getResource("/Images/iconOutputFile24px.png")));
 		btnOutputFile.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnOutputFile.setBackground(Color.LIGHT_GRAY);
-		btnOutputFile.setBounds(1060, 110, 120, 35);
-		contentPane.add(btnOutputFile);
+		btnOutputFile.setBounds(795, 110, 120, 35);
+		panelRight.add(btnOutputFile);
 		
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
 			new String[] {
-				"ID", "T\u00EAn KH", "S\u1ED1 \u0111i\u1EC7n tho\u1EA1i", "Email", "T\u1ED5ng \u0111\u00E3 mua"
+				"M\u00E3 nh\u00E2n vi\u00EAn", "H\u1ECD t\u00EAn", "CCCD", "S\u1ED1 \u0111i\u1EC7n tho\u1EA1i", "Ng\u00E0y sinh", "Gi\u1EDBi t\u00EDnh", "\u0110\u1ECBa ch\u1EC9"
 			}
 		) {
 			Class[] columnTypes = new Class[] {
-				String.class, String.class, String.class, String.class, Double.class
+				String.class, String.class, String.class, String.class, String.class, String.class, String.class
 			};
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
 			}
 		});
-		table.setBounds(295, 182, 870, 390);
-		contentPane.add(table);
+		table.setBounds(20, 190, 870, 390);
+		panelRight.add(table);
 		
-		JButton btnAddCustomer = new JButton("Thêm KH");
-		btnAddCustomer.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnAddCustomer.setBackground(new Color(153, 153, 255));
-		btnAddCustomer.setBounds(779, 605, 120, 35);
-		contentPane.add(btnAddCustomer);
+		JButton btnAdd = new JButton("Thêm nhân viên");
+		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnAdd.setBackground(new Color(153, 153, 255));
+		btnAdd.setBounds(505, 610, 120, 35);
+		panelRight.add(btnAdd);
 		
-		JButton btnEditCustomer = new JButton("Sửa thông tin");
-		btnEditCustomer.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnEditCustomer.setBackground(new Color(153, 153, 255));
-		btnEditCustomer.setBounds(920, 605, 120, 35);
-		contentPane.add(btnEditCustomer);
+		JButton btnEdit = new JButton("Sửa thông tin");
+		btnEdit.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnEdit.setBackground(new Color(153, 153, 255));
+		btnEdit.setBounds(650, 610, 120, 35);
+		panelRight.add(btnEdit);
 		
-		JButton btnDelCustomer = new JButton("Xóa KH");
-		btnDelCustomer.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnDelCustomer.setBackground(new Color(153, 153, 255));
-		btnDelCustomer.setBounds(1060, 605, 120, 35);
-		contentPane.add(btnDelCustomer);
+		JButton btnDel = new JButton("Xóa nhân viên");
+		btnDel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnDel.setBackground(new Color(153, 153, 255));
+		btnDel.setBounds(795, 610, 120, 35);
+		panelRight.add(btnDel);
 	}
 }

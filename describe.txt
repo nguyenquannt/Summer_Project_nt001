@@ -52,6 +52,35 @@ Giá vốn Double
 Giá bán Double
 Nhà cung cấp String
 
+CSDL - Nhân viên
+ID String
+Họ tên String
+CCCD String
+Số điện thoại String
+Ngày sinh Date
+Giới tính true/false
+Tỉnh String
+Quận String 
+Phường String
+Địa chỉ cụ thể String
+Chức vụ String
+Lương Double
+Mật khẩu
+
+CSDL - Tỉnh 
+ID STring
+Tỉnh String
+
+CSDL - Quận 
+ID String
+Quận String
+Tỉnh String
+
+CSDL - Phường 
+ID String 
+Phường String
+Quận String
+
 ----------------
 GUI
 Tài khoản - Account_GUI
@@ -61,3 +90,5 @@ Tạo Voucher - CreateVoucher_GUI
 Khách hàng - Customer_GUI - AddCustomer_GUI
 Sản phẩm và dịch vụ - ProductAndSevices_GUI
 Quản lý kho - Warehouse_GUI - AddWarehouse_GUI
+Báo cáo - 
+Nhân viên - Staff_GUI - AddStaff_GUI
